@@ -99,8 +99,6 @@
             </li>
         </ol>       
 
-        <a href="#pagewrap">Back to top &uarr;</a>
-
 <!-- Apache Nutch 1.7 ************************************************************************************************************************************************************************************************************ -->
         <h2 id="apacheNutch">Step 2: Apache Nutch 1.7</h2>
         <ol>
@@ -260,8 +258,6 @@
             <li>Ensure the <strong>schema.xml</strong> is matching for both Nutch 1.7 and Solr 4.5 (see step 8).        
             </li>
         </ol>       
-
-        <a href="#pagewrap">Back to top &uarr;</a>
 
         <!-- AJAX Solr ************************************************************************************************************************************************************************************************************ -->
         <h2 id="ajaxSolr">Step 3: AJAX Solr</h2>
@@ -461,12 +457,6 @@
 
         </ol>
 
-        <a href="#pagewrap">Back to top &uarr;</a>
-
-    </div>
-
-    <div id="footer">
-        <p>The Enterprise Marketing Applications Team (EMAT) is committed to assisting the Marketing Department in achieving their objectives by providing creative solutions and timely services while moving the needle forward in software development efficiencies which improve the overall student experience.</p>
     </div>
 
 </div>

@@ -138,14 +138,14 @@
 </pre>                  
             </li>
 
-            <li>Replace the last line of <strong>regex-urlfilter.txt</strong> to be specific to www.mywebsite.edu (both secure and non-secure protocols):
+            <li>Replace the last line of <strong>regex-urlfilter.txt</strong> to be specific to www.mywebsite.com (both secure and non-secure protocols):
 <pre>
     <code>
     /* PROJECT DIRECTORY */
     johnsmith > nutch > conf > regex-urlfilter.txt
 
     /* REPLACE WITH */
-    ++^(https?://)?www\.mywebsite.edu
+    ++^(https?://)?www\.mywebsite.com
     </code>             
 </pre>                  
             </li>
@@ -167,7 +167,7 @@
             <li>Edit the <strong>seed.txt</strong> with the following URL:
 <pre>
     <code>  
-    http://www.mywebsite.edu/
+    http://www.mywebsite.com/
     </code>             
 </pre>                  
             </li>

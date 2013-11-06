@@ -111,7 +111,7 @@ pre {
 
 	<div id="header">
 		<h1>Apache Solr Documentation</h1>
-		<p>This document is designed to set up a local instance of Solr 4.5, indexing a site to Solr with Nutch 1.7, then finally integrating that to the front-end with JavaScript framework AJAX Solr. By the end of the tutorial you will be able to perform a global search of all web pages within your domain of <em>www.mywebsite.com</em>.</p>
+		<p>This document is designed to set up a local instance of Solr 4.5, indexing a site to Solr with Nutch 1.7, then finally integrating that to the front-end with JavaScript framework AJAX Solr. By the end of the tutorial you will be able to perform a global search of all web pages within your domain of <span>www.mywebsite.com</span>.</p>
 		
 		<ul>
 		<li><a href="#apacheSolr">Apache Solr 4.5</a></li>
@@ -122,7 +122,7 @@ pre {
 
 	<div id="content">
 <!-- Apache Solr 4.5 ************************************************************************************************************************************************************************************************************ -->	
-		<h2 id="apacheSolr">Apache Solr 4.5</h2>
+		<h2 id="apacheSolr">Step 1: Apache Solr 4.5</h2>
 		<ol>
 			<li><a href="http://lucene.apache.org/solr/downloads.html" target="_blank">Download</a> Solr 4.5 into its own directory (i.e. /Users/johnsmith/solr).</li>
 			
@@ -211,7 +211,7 @@ pre {
 		<a href="#pagewrap">Back to top &uarr;</a>
 		
 <!-- Apache Nutch 1.7 ************************************************************************************************************************************************************************************************************ -->
-		<h2 id="apacheNutch">Apache Nutch 1.7</h2>
+		<h2 id="apacheNutch">Step 2: Apache Nutch 1.7</h2>
 		<ol>
 			<li><a href="http://www.motorlogy.com/apache/nutch/" target="_blank">Download</a> Nutch 1.7 into its own directory (i.e. /Users/johnsmith/nutch).</li>
 			
@@ -224,7 +224,7 @@ pre {
 	/* PROPERTIES TO ADD */
 	&lt;property&gt;
 		&lt;name&gt;http.agent.name&lt;/name&gt;
-		&lt;value&gt;My Website Spider&lt;/value&gt;
+		&lt;value&gt;My mywebsite Spider&lt;/value&gt;
 	&lt;/property&gt;
 	
 	&lt;property&gt;
@@ -249,14 +249,14 @@ pre {
 </pre>					
 			</li>
 			
-			<li>Replace the last line of <strong>regex-urlfilter.txt</strong> to be specific to www.mywebsite.com (both secure and non-secure protocols):
+			<li>Replace the last line of <strong>regex-urlfilter.txt</strong> to be specific to www.mywebsite.edu (both secure and non-secure protocols):
 <pre>
 	<code>
 	/* PROJECT DIRECTORY */
 	johnsmith > nutch > conf > regex-urlfilter.txt
 	
 	/* REPLACE WITH */
-	++^(https?://)?www\.mywebsite.com
+	++^(https?://)?www\.mywebsite.edu
 	</code>				
 </pre>					
 			</li>
@@ -278,7 +278,7 @@ pre {
 			<li>Edit the <strong>seed.txt</strong> with the following URL:
 <pre>
 	<code>	
-	http://www.mywebsite.com/
+	http://www.mywebsite.edu/
 	</code>				
 </pre>					
 			</li>
@@ -373,7 +373,7 @@ pre {
 		<a href="#pagewrap">Back to top &uarr;</a>
 		
 		<!-- AJAX Solr ************************************************************************************************************************************************************************************************************ -->
-		<h2 id="ajaxSolr">AJAX Solr</h2>
+		<h2 id="ajaxSolr">Step 3: AJAX Solr</h2>
 		<p>Integration of this framework assumes a dependency on jQuery.</p>
 		<ol>
 			<li><a href="https://github.com/evolvingweb/ajax-solr" target="_blank">Download</a> AJAX Solr into its own directory (i.e. /Users/johnsmith/ajax-solr).
@@ -389,7 +389,7 @@ pre {
 			
 			<li>Assuming you have an <strong>images directory</strong> in place, add 'ajax-loader.gif' as a file of that directory.</li>
 						
-			<li>Assuming you have a <strong>js directory</strong> in place and are leveraging HTML’s footer tag, paste the following script tags after &lt;/footer&gt; of your project template:
+			<li>Assuming you have a <strong>js directory</strong> load the JavaScript files to that directory and paste the following script tags after &lt;/footer&gt; of your project template:
 <pre>
 	<code>
 	&lt;script src="js/search.js"&gt;&lt;/script&gt;
@@ -404,6 +404,8 @@ pre {
 	</code>
 </pre>					
 			</li>
+			
+			<li>Copy the <a href="https://github.com/evolvingweb/ajax-solr/blob/master/examples/reuters/js/reuters.js" target="_blank">reuters.js</a> file and rename it to, <strong>search.js</strong></li>
 			
 			<li>Open <strong>search.js</strong> and remove the following addWidget methods and its corresponding code blocks:
 <pre>
@@ -452,6 +454,18 @@ pre {
 	}					
 	</code>
 </pre>					
+			</li>
+			
+			<li>In <strong>search.js</strong>, update the solrUrl from 'http://evolvingweb.ca/solr/reuters/' to the following:
+<pre>
+	<code>
+	//Old
+	solrUrl: 'http://evolvingweb.ca/solr/reuters/'
+
+	//New
+	solrUrl: '//localhost:8983/solr/mywebsite/'
+	</code>
+</pre>				
 			</li>
 			
 			<li>In <strong>search.js</strong>, update the query from '*:*' wildcard with the following:
@@ -558,6 +572,10 @@ pre {
 
 		<a href="#pagewrap">Back to top &uarr;</a>
 	
+	</div>
+	
+	<div id="footer">
+		<p>The Enterprise Marketing Applications Team (EMAT) is committed to assisting the Marketing Department in achieving their objectives by providing creative solutions and timely services while moving the needle forward in software development efficiencies which improve the overall student experience.</p>
 	</div>
 
 </div>

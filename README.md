@@ -2,7 +2,7 @@
 
     <div id="header">
         <h1>Apache Solr Documentation</h1>
-        <p>This document is designed to set up a local instance of Solr 4.5, indexing a site to Solr with Nutch 1.7, then finally integrating that to the front-end with JavaScript framework AJAX Solr. By the end of the tutorial you will be able to perform a global search of all web pages within your domain of <span>www.mywebsite.com</span>.</p>
+        <p>This document is designed to set up a local instance of Solr 4.5, indexing a site to Solr with Nutch 1.7, then finally integrating that to the front-end with JavaScript framework AJAX Solr. By the end of the tutorial you will be able to perform a global search of all web pages within your domain of <em>www.mywebsite.com</em>.</p>
 
         <ul>
         <li>Apache Solr 4.5</li>
